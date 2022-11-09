@@ -1,0 +1,27 @@
+
+
+GET /hotels?location=Michigan&...
+ Query params	{ location: Michigan, date_from: 2022-11-07, date_to: ..., stars: 5, expense_max: 170 , expense_min: ..., bedrooms: 2 }
+ 
+ Response (overview) 	{Name, price, ...}
+
+
+
+
+User clicks speicific one more details
+
+GET /hotel/{room_id}
+
+ Response { exactAddress, ratings, ..., picturesUrl }
+
+-> Load UI page
+
+
+
+
+Last step? Booking
+
+POST /hotel/{room_id}
+
+ JSON body	{ authToken, numGuests, namePerson, paymentInfo, petsBoolean }
+ 

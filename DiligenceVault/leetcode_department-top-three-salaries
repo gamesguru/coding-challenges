@@ -1,0 +1,21 @@
+# https://leetcode.com/problems/department-top-three-salaries/
+
+
+# Write your MySQL query statement below
+
+
+select departmentId, salary from Employee order by salary limit 3;
+
+
+1: [joe, henry]
+
+2: [other people]  sort(salary)[3:] -> top 3 salaries for dept 2
+
+    set(salaries) -> take top 3 -> 90000, 85000, 70000
+
+    90000: [max]
+    85000: [joe, randy]
+    ....
+
+
+3: [...]

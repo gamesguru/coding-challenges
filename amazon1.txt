@@ -1,0 +1,61 @@
+Amazon Flex  allows drivers to sign up for 
+delivering packages at their own schedule. 
+The drives reserve block of time well in advance and 
+come to warehouse at the start of the shift to pick up 
+packages and deliver them to Customers. 
+
+For e.g Alice can decide to deliver packages between 2pm and 7pm 
+every day. 
+Bob selected 12am to 8am every day to deliver the packages. 
+
+Given a list of packages each with co-ordinates 
+how can we generate an optimal route plan that enables Amazon 
+to deliver as many packages as possible within the window 
+selected by the driver.
+
+
+def distance(a, b):
+    pass
+
+
+def closest_pt(packages, current_location):
+    
+    dists = []
+    for p in packages:
+        d = distance(current_location, p)
+        dists.append(d)
+    
+    m = find_min_index(d)
+    return packages[m]
+        
+        
+    
+
+def optimize(packages, shift_time_range):
+    
+    shift_dist = shift_time_range * 3
+    
+    loc = (0, 0)
+    route = [] # list of package drops
+    dist = 0
+    while True:
+        package = closest_pt(packages, loc)
+        new_dist = euclid_dist(loc, package)
+        
+        if dist + new_dist < shift_dist:
+            route.append(package)
+            dist += new_dist
+            loc = package # e.g. first package (1, 2) ---> second package...
+        else:
+            break
+
+
+
+
+# speed = 3 mph
+p = [(1, 1), (2, 3), (2, 4), (3, 6), (2, 5), (5, 9)]
+shift = 2 # hours
+solution = optimize(p, shift)
+
+# we expect: Alice only drops off 1 package (first one, it's the closest)
+print(solution)
