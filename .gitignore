@@ -1,3 +1,13 @@
+#################
+# c++ ignore
+#################
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+
 # macOS/backup files
 .~*
 ._*
@@ -8,4 +18,4 @@
 # Our files
 .vscode/
 .idea/
-
+.venv/
