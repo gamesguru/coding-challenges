@@ -1,0 +1,21 @@
+[submodule "amazon"]
+	path = amazon
+	url = git@github.com:gamesguru/amazon_12-31-2020.git
+[submodule "ford"]
+	path = ford
+	url = git@github.com:gamesguru/hackerrank-ford.git
+[submodule "hackerrank"]
+	path = hackerrank
+	url = git@github.com:gamesguru/hackerrank-interview-prep.git
+[submodule "other-repos/leetcode-jiahong"]
+	path = other-repos/leetcode-jiahong
+	url = git@github.com:wjzwjh/Leetcode.git
+[submodule "leetcode"]
+	path = leetcode
+	url = git@github.com:gamesguru/leetcode.git
+[submodule "rosalind"]
+	path = rosalind
+	url = git@github.com:gamesguru/rosalind.git
+[submodule "other-repos/scala-demo"]
+	path = other-repos/scala-demo
+	url = git@github.com:gamesguru/scala-demo.git
