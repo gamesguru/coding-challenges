@@ -1,0 +1,11 @@
+# macOS/backup files
+.~*
+._*
+~$*
+.DS_Store
+*.swp
+
+# Our files
+.vscode/
+.idea/
+
