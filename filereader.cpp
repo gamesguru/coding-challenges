@@ -4,6 +4,8 @@
 #include <map>
 #include <filesystem>
 
+#include "filereader.h"
+
 std::string readFileContents(const std::string& filePath) {
     std::ifstream file(filePath);
     if (!file.is_open()) {
